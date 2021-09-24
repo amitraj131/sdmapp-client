@@ -44,7 +44,7 @@ function AddStaff(){
     const classes = useStyles();
 
     useEffect(()=>{
-        Axios.get("http://localhost:3002/read").then((response)=>{
+        Axios.get("https://sdm-deaddiction-centre.herokuapp.com/read").then((response)=>{
             setUserList(response.data);
             
         });
@@ -52,7 +52,7 @@ function AddStaff(){
 
 
     const addToUser=()=>{
-        Axios.post("http://localhost:3002/insert",{
+        Axios.post("https://sdm-deaddiction-centre.herokuapp.com/insert",{
             staffUname:staffUname,
             staffPass:staffPass,
             role:role
